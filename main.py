@@ -22,6 +22,7 @@ def main():
     """Main function"""
     my_auth: Auth = Auth()
     print(my_auth)
+    print("This is a welcome message")
 
 
 if __name__ == "__main__":
