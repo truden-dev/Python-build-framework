@@ -17,6 +17,6 @@ jobs:
     - name: Install dependencies
       run: |
         poetry install
-    - name: Analysing the code with pre-commit 
+    - name: Analysing the code with pre-commit
       run: |
         poetry run pre-commit run --all-files
