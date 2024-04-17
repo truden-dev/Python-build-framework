@@ -1,6 +1,5 @@
 """Main program"""
 
-import os
 from dataclasses import dataclass
 
 from dotenv import load_dotenv
@@ -9,20 +8,26 @@ load_dotenv()
 
 
 @dataclass
-class Auth:
-    """Cognite auth parameters"""
+class Animal:
+    """Animal class"""
 
-    tenant_id: str | None = os.getenv("TENANTID")
-    project: str | None = os.getenv("PROJECT")
-    base_url: str | None = os.getenv("BASEURL")
-    token: str | None = os.getenv("TOKEN")
+    type: str
+    num_legs: int
+    num_eyes: InterruptedError
+
+
+def print_anmial(input_animal: Animal) -> None:
+    print(f"My animal is a {input_animal.type}")
+    print(
+        f"It has {input_animal.num_legs} legs \
+          and {input_animal.num_eyes} eyes"
+    )
 
 
 def main():
     """Main function"""
-    my_auth: Auth = Auth()
-    print(my_auth)
-    print("This is a welcome message")
+    my_animal: Animal = Animal(type="Dog", num_legs=4, num_eyes=2)
+    print_anmial(my_animal)
 
 
 if __name__ == "__main__":
