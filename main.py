@@ -1,4 +1,4 @@
-"""Main program"""
+"""Main program - Windows adapted"""
 
 from dataclasses import dataclass
 
